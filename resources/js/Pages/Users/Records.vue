@@ -54,6 +54,7 @@
                 <th class="border border-slate-300 ... p-5">City</th>
                 <th class="border border-slate-300 ... p-5">State</th>
                 <th class="border border-slate-300 ... p-5">Zip Code</th>
+                <th class="border border-slate-300 ... p-5">Local TimeZone Time</th>
                 <th class="border border-slate-300 ... p-5">Edit</th>
                 <th class="border border-slate-300 ... p-5">Delete</th>
               </tr>
@@ -88,6 +89,9 @@
                 </td>
                 <td class="border border-slate-300 ... p-5">
                   {{ data.zip_code }}
+                </td>
+                <td class="border border-slate-300 ... p-5">
+                  {{ data.home_address_current_time }}
                 </td>
                 <td class="border border-slate-300 ... p-5">
                   <button

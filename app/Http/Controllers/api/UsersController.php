@@ -71,7 +71,7 @@ class UsersController extends Controller
                 $user->city = $request->city;
                 $user->state = $request->state;
                 $user->zip_code = $request->zip_code;
-                $user->home_address_current_time = $request->home_address_current_time;
+                $user->home_address_current_time = getTimezone($request->city.' '.$request->state);
                 $user->save();
                 $response = [
                     'success' => true,
@@ -164,7 +164,7 @@ class UsersController extends Controller
             "city" => $input['city'],
             "state" => $input['state'],
             "zip_code" => $input['zip_code'],
-
+            "home_address_current_time" => getTimezone($input['city'].' '.$input['state'])
           ]);
         $response = [
             'success' => true,
