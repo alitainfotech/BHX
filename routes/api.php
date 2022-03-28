@@ -15,7 +15,6 @@ use \App\Http\Controllers\api\UsersController;
 */
 
 Route::resource('users', UsersController::class);
-Route::get('/address',function(){
-    dd(getTimezone("sydney"));
-});
-
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
